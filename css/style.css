@@ -1,0 +1,173 @@
+/* reset */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'outfit-regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('outfit-regular'),
+        url('../fonts/outfit-regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'raleway-regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('raleway-regular'),
+        url('../fonts/raleway-regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+/* vars */
+:root {
+    --fonts-out: 'outfit-regular', sans-serif;
+    --fonts-ral: 'raleway-regular', sans-serif;
+
+
+    --index: calc(1vw + 1vh);
+    --color-header: #f4efec;
+    --color-text: #cdc6c3;
+    --gallery-gap: calc(var(--index) * 10);
+}
+
+
+/* global */
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-size: 50px;
+    color: #fafafa;
+    font-family: var(--fonts-out);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonts-out);
+}
+
+
+/* style */
+
+.hero {
+    width: calc(var(--index) * 40);
+    position: absolute;
+    left: 37vw;
+    top: 8vh;
+    z-index: -1;
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 7vw;
+}
+
+.main-title {
+    font-size: calc(var(--index) * 8);
+    position: absolute;
+    width: min-content;
+    bottom: 12vh;
+    line-height: .9;
+
+}
+
+.gallery {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery__item {
+    max-width: calc(var(--index) * 21);
+    margin-bottom: var(--gallery-gap);
+    max-height: 180vh;
+    border-radius: 8px;
+}
+
+.gallery__left {
+    margin-top: calc(var(--gallery-gap) * 1.75);
+}
+
+.gallery__right .gallery__item {
+    margin: 0;
+    margin-top: var(--gallery-gap);
+}
+
+.text-block {
+    color: var(--color-text);
+    position: relative;
+}
+
+.text-block__h {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--color-header);
+    margin-bottom: 1.5rem;
+}
+
+.text-block__p {
+    line-height: 1.75;
+}
