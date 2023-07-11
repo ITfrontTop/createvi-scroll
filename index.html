@@ -10,7 +10,7 @@
     <script src="libs/gsap.min.js" defer></script>
     <script src="libs/ScrollSmoother.min.js" defer></script>
     <script src="libs/ScrollTrigger.min.js" defer></script>
-    <script src="js/main.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     
@@ -19,9 +19,9 @@
         <div class="content">
 
             <header class="hero-section">
-                <img class="hero" src="images/hero.png" alt="#">
+                <img data-speed=".6" class="hero" src="images/hero.png" alt="#">
                 <div class="container">
-                    <div class="main-header">
+                    <div data-speed=".75" class="main-header">
                         <h1 class="main-title">creative scroll</h1>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
             <div class="portfolio">
                 <div class="container">
                     <main class="gallery">
-                        <div class="gallery__left">
+                        <div data-speed=".9" class="gallery__left">
                             
                             <img class="gallery__item" src="images/1.jpg" alt="#">
                             <img class="gallery__item" src="images/2.jpg" alt="#">
@@ -44,7 +44,7 @@
                             <img class="gallery__item" src="images/6.jpg" alt="#">
         
                         </div>
-                        <div class="gallery__right">
+                        <div data-speed="1.1" class="gallery__right">
                             
                             <div class="text-block gallery__item">
                                 <h2 class="text-block__h">Creative floating scroll with amazing parallax effect</h2>
@@ -63,6 +63,6 @@
         </div>
     </div>
     
-    
+
 </body>
 </html>

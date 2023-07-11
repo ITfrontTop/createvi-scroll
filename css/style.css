@@ -88,6 +88,11 @@ a {
 
 /* global */
 
+/* will-change */
+.content, .hero, .main-header, .gallery > *  {
+    will-change: transform;
+}
+
 body {
     background-image: url(../images/bg.jpg);
     background-size: 50px;
